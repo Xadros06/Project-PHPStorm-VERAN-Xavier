@@ -1,0 +1,29 @@
+<h1>Mes Information d'identité</h1>
+<%if (user.Nom == null){%>
+
+<p>Prenom : <%= user.prenom%></p>
+<%}%>
+
+<h4>Mon adresse de messagerie utilisée</h4>
+<p>login : <%= user.email%> </p>
+
+
+<h2>Changer ses informations d'identité et de connexion</h2>
+
+<p> Veuillez saisir les nouvelles informations ci-dessous : </p>
+<form method="POST" action="/user/<%= user.id%>" >
+  <p>Prenom :  </p><input type="text" name="prenom" >
+  <input type="submit" value="submit">
+
+</form>
+
+<form method="POST" action="/user/<%= user.id%>">
+  <p>Adrese électronique :  </p><input type="email" name="email">
+  <input type="submit" value="submit">
+
+</form>
+</br>
+<a href="http://localhost:1337/">Page d'accueil</a>
+
+
+
